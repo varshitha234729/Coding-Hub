@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coding Hub Login</title>
+  <link rel="stylesheet" href="../css/login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <img 
+  src="https://th.bing.com/th/id/OIP.Ahj5w8CvVb8EVlYN7uvTngHaE0?rs=1&pid=ImgDetMain" 
+  alt="Edge Application Image" 
+  width="350"
+  height="250" 
+  style="border-radius: 10px; margin-bottom: 30px;"
+    />
+    <h1><strong>Login</strong></h1>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <p id="error-msg"></p>
+    </form>
+    <div style="margin-top: 15px; font-size: 0.9rem;">
+  <a href="signup.html" style="display: block; color: blue; text-decoration: underline; margin-bottom: 5px;">
+    Don't have an account?
+  </a>
+  <a href="forgot.html" style="display: block; color: blue; text-decoration: underline;">
+    Couldn't find Password?
+  </a>
+</div>
+  </div>
+  <script src="../js/login.js"></script>
+</body>
+</html>

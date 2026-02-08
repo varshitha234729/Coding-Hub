@@ -1,0 +1,162 @@
+const params = new URLSearchParams(window.location.search);
+    const language = params.get('language');
+    document.getElementById('title').textContent = `Subtopics in ${language}`;
+
+    const subtopicsData = {
+      'JavaScript': [
+        { name: 'Variables', desc: 'Basic Learning' },
+        { name: 'Primitives and Objects', desc: 'Introduction' },
+        { name: 'Operators and Expressions', desc: 'Operators to learn' },
+        {name:'Conditional Expressions',desc:'Conditions based questions'},
+        {name:'Functions',desc:'Learn the program creation'},
+        {name:'String and String methods',desc:'String class'},
+        {name:'Array Methods',desc:'Array types'},
+        {name:'Script tag',desc:'Script concept'},
+        {name:'Console Object',desc:'Console concept'},
+        {name:'alert,prompt and confirm',desc:'Some Concepts'},
+        {name:'DOM, BOM & Window Object',desc:'Some Concepts'},
+        {name:'Element Navigation',desc:'Navigation Concept'},
+        {name:'Table Navigation',desc:'Navigation Concept'},
+        {name:'matches,closest and contains',desc:'Few Concepts'},
+        {name:'HTML Attributes and Methods',desc:'HTML Concepts'},
+        {name:'HTML Insertion Methods',desc:'HTML Methods'},
+        {name:'Browser Events',desc:'Event concept'},
+        {name:'CallBacks',desc:'Call back concept'},
+        {name:'Promises',desc:'Promise concept'},
+        {name:'Finally clause',desc:'learn finally clause '},
+        {name:'Prototypes',desc:'learn Protypes'},
+      ],
+      'Python': [
+        { name: 'List', desc: 'Introduction!' },
+        { name: 'Tuple and Set', desc: 'Introduction!' },
+        { name: 'Dictionary', desc: 'Inttroduction!' },
+        { name: 'Number System Conversion', desc: 'Conversions concept' },
+        { name: 'User input in Python', desc: 'Inputs concept' },
+        { name: 'Pass', desc: 'pass keyword' },
+        { name: 'Patterns in python', desc: 'Drawing Patterns' },
+        { name: 'Matrix', desc: 'Implementing matrix in python' },
+        { name: 'Arguments', desc: 'Arguments concept' },
+        { name: 'Filter,Map and Reduce', desc: 'Techniques in python' },
+        { name: 'Abstract class and Abstract method', desc: 'Abstract keyword' },
+        { name: 'Iterator and Generators', desc: 'Learn Introduction' },
+        { name: 'Searching Algorithms', desc: 'Linear and Binary search' },
+        { name: 'Sorting Methods', desc: 'Bubble sort and Selection sort' },
+        { name: 'Zip function', desc: 'Zip concept' },
+        { name: 'Data types ', desc: 'Data types concept' },
+        { name: 'IDLE Command', desc: 'Commands' },
+        { name: 'Operators', desc: 'Operators concept' },
+        { name: 'For Else in Python', desc: 'Conditional statements' },
+        { name: 'Arrays', desc: 'Arrays concept' },
+      ],
+      'Java': [
+        { name: 'Variables', desc: 'Basics learning' },
+        { name: 'Datatypes', desc: 'Important to learn' },
+        { name: 'Literals', desc: 'Creation of Variables' },
+        { name: 'Type Conversion', desc: 'Conversion of data types' },
+        { name: 'Operators', desc: 'Operators to learn' },
+        { name: 'Control statements',desc: 'Loops and Conditions' },
+        { name: 'Class and Object', desc: 'Introduction in JAVA' },
+        { name: 'Methods', desc: 'Learn the program creation' },
+        { name: 'MethodOverloading and MethodOverriding', desc: 'Operations of Methods' },
+        { name: 'Static Keyword', desc: 'Learn how to use Static keyword' },
+        { name: 'This Keyword', desc: 'Learn how to use This keyword' },
+        { name: 'Constructor', desc: 'Learn use of constructor' },
+        { name: 'Inheritance', desc: 'Types of Inheritance' },
+        { name: 'Packages', desc: 'Creating a Package' },
+        { name: 'Final Keyword', desc: 'Learn how to use Final keyword' },
+        { name: 'Abstract Keyword', desc: 'Learn how to use Abstract keyword' },
+        { name: 'Interface', desc: 'Types of Interfaces' },
+        { name: 'Exception Handling', desc: 'Removing the Errors' },
+        { name: 'Thread Concept', desc: 'Important Concept' },
+        { name: 'Swing Components', desc: 'Using Swing components designing an event' },
+        { name: 'Event Handling', desc: 'Types of events' },
+      ],
+      'C++': [
+        {name:'Basic Structure of C++',desc:'Introduction'},
+        { name: 'Variables & Comments', desc: 'Introduction' },
+        { name: 'Conditional Statements & Loops', desc: 'Introduction' },
+        { name: 'Patterns', desc: 'Important Concept' },
+        { name: 'Datatypes', desc: 'Introduction' },
+        { name: 'Header files & Operators', desc: 'Important Concept' },
+        { name: 'Reference Variables & Typecasting', desc: 'Conversion of Datatype and Variables reference' },
+        { name: 'Constants,Manipulators & Operator Precedence', desc: 'Some Concepts' },
+        { name: 'Pointers', desc: 'Pointers Concept' },
+        { name: 'Arrays', desc: 'Arrays Concept' },
+        { name: 'Enums', desc: 'Enums Concept' },
+        { name: 'Inline Functions, Default Arguments and Constant Arguments', desc: 'Arguments' },
+        { name: 'Recursion & Recursive Functions', desc: 'Recursion concept' },
+        { name: 'Function Overloading', desc: 'Methods of function' },
+        { name: 'Nesting Member Functions', desc: 'Important Concept' },
+        { name: 'Friend classes,Friend functions & Member Friend Functions', desc: 'Friend keyowrd' },
+        { name: 'Copy Constructor', desc: 'Constructor concept' },
+        { name: 'Destructor', desc: 'Destructor concept' },
+        { name: 'Virtual Base Class & Virtual Functions', desc: 'Virtual Keyword' },
+        { name: 'Constructor Overloading', desc: 'Constructor Concept'},
+        { name: 'Containers,List & Map', desc: 'Important concept' },
+        { name: 'C++ Functional Templates', desc: 'Templates in C++' }
+      ],
+      'DSA': [
+        { name: 'Time Complexity', desc: 'Measuring the Working'},
+        { name: 'Asymptotic Notations', desc: 'Notations'},
+        { name: 'Arrays', desc: 'Arrays concept'},
+        { name: 'Abstract data type', desc: 'Abstract concept'},
+        { name: 'Operations on arrays', desc: 'Array operations'},
+        { name: 'Linked List', desc: 'Important concept'},
+        { name: 'Operations on Linked list', desc: 'Linked list operations'},
+        { name: 'Types of Linked Lists', desc: 'Types'},
+        { name: 'Stack', desc: 'Important concept'},
+        { name: 'Operations of Stack', desc: 'Stack operations'},
+        { name: 'Stack using Array', desc: 'Array on stack'},
+        { name: 'Stack operations using Linked list', desc: 'Linked list on stack'},
+        { name: 'Parenthesis Matching', desc: 'Parenthesis concept'},
+        { name: 'Parenthesis Checking', desc: 'Parenthesis concept'},
+        { name: 'Infix,Prefix,Postfix Expressions', desc: 'Expressions'},
+        { name: 'Queue', desc: 'Important concept'},
+        { name: 'Operations on Queue', desc: 'Queue operations'},
+        { name: 'Queue using Array', desc: 'Array on queue'},
+        { name: 'Queue using Linked list', desc: 'Linked list on queue'},
+        { name: 'Sorting Algorithms in DSA', desc: 'Algorithms'},
+        {name:'Trees',desc:'Important concept'},
+        {name:'Types of Trees',desc:'Tree types'},
+        {name:'Operations on Types of Trees',desc:'Tree Operations'},
+        {name:'Graphs',desc:'Important concept'},
+        {name:'Types of Graphs',desc:'Graphs types'}
+      ],
+      'C': [
+        { name: 'Basic Structure of C', desc: 'Structure' },
+        { name: 'Variables & Datatypes', desc: 'Intrroduction' },
+        { name: 'Operators', desc: 'concepts'},
+        { name: 'Format Specifiers and Escape Sequences', desc: 'Important topics' },
+        { name: 'Control Statements', desc: 'Statements based on Conditions' },
+        { name: 'Loops', desc: 'Loops' },
+        { name: 'Typecasting', desc: 'Conversion of Datatypes' },
+        { name: 'Functions', desc: 'Functions' },
+        { name: 'Arrays', desc: 'Arrays concept' },
+        { name: 'Pointers', desc: 'Pointers concept' },
+        { name: 'Call by Value & Call by Reference', desc: 'Important topics' },
+        { name: 'Strings', desc: 'Strings' },
+        { name: 'String Functions', desc: 'Function of Strings' },
+        { name: 'Structures', desc: 'Structures concept' },
+        { name: 'Unions', desc: 'Unions concept' },
+        { name: 'Static Variables', desc: 'Static concept' },
+        { name: 'Dynamic Memory Allocation', desc: 'Allocation concepts' },
+        { name: 'Storage classes', desc: 'Storage concept' },
+        { name: 'Predefined Macros & Pre-processor Directives', desc: 'Important Topics' },
+        { name: 'File Modes', desc: 'File concept' }
+      ]
+    };
+    const container = document.getElementById('subtopics');
+    const subtopics = subtopicsData[language] || [];
+
+    subtopics.forEach(topic => {
+      const div = document.createElement('div');
+      div.className = 'subtopic';
+      div.innerHTML = `
+        <div class="subtopic-title">${topic.name}</div>
+        <div class="subtopic-desc">${topic.desc}</div>
+      `;
+      div.onclick = () => {
+        window.location.href = `quiz-page.html?language=${encodeURIComponent(language)}&subtopic=${encodeURIComponent(topic.name)}`;
+      };
+      container.appendChild(div);
+    });

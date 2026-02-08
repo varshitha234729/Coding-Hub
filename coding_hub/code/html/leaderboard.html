@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../css/leaderboard.css" />
+  <title>CodingHub Leaderboard</title>
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <img src="https://th.bing.com/th/id/OIP.Ahj5w8CvVb8EVlYN7uvTngHaE0?rs=1&pid=ImgDetMain" alt="Logo" class="brand-logo">
+      <h1 class="title">Coding Hub 🚀</h1>
+    </div>
+    <nav class="nav-right">
+      <div class="nav-links">
+        <a href="home.html" id="home-link">Home</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html" id="status-change" onclick="toggleSignInSignOut()">Sign In</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="leaderboard-container">
+    <header class="leaderboard-header">
+      <h1>Quiz Leaderboard</h1>
+    </header>
+    <div class="user-profile">
+      <h2>User Name: <span id="user-name">---</span></h2>
+      <h2>Your Rank: <span id="user-rank">---</span></h2>
+      <h2>Your Score: <span id="user-score">0</span></h2>
+    </div>
+    <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Subject</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Karthik</td>
+                    <td>JAVA</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mythri</td>
+                    <td>PYTHON</td>
+                    <td>1800</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bhavya</td>
+                    <td>C Programming Language</td>
+                    <td>1700</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Pavan</td>
+                    <td>DSA</td>
+                    <td>1600</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Dhanush</td>
+                    <td>SQL</td>
+                    <td>1500</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+  <script src="../js/leaderboard.js"></script>
+</body>
+</html>

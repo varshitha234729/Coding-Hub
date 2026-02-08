@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: Arial, sans-serif;
+    background:black;
+    margin: 0;
+    text-align: center;
+    color: black;
+    overflow: scroll;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 10px 20px;
+  border-radius: 0 0 10px 10px;
+  flex-wrap: wrap;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between nav links and user icon */
+}
+.nav-links {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: #5c5cff;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  flex-shrink: 1;
+}
+
+.brand-logo {
+  width: 50px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #2c2e43;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+.title {
+  font-size: 1.8rem;
+  color: #fff;
+  white-space: nowrap;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: left;
+}
+.profile-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-container {
+    width: 400px;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.profile-header {
+    margin-bottom: 20px;
+}
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    border: 3px solid #007bff;
+    margin-bottom: 10px;
+}
+.username {
+    font-size: 24px;
+    margin: 0;
+    color: #343a40;
+}
+.profile-info {
+    margin-top: 20px;
+    text-align: left;
+}
+.profile-info p {
+    margin: 5px 0;
+    color: #495057;
+}
+.profile-actions {
+    margin-top: 20px;
+}
+.login-button, .logout-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+.login-button:hover, .logout-button:hover {
+    background-color: #0056b3;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+    color: #148df0;
+}

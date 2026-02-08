@@ -1,0 +1,14 @@
+body {
+      font-family: 'Inter', sans-serif;
+      background: black;
+      margin: 0;
+      padding: 0;
+      color: white;
+      text-align: center;
+    }
+    #results { margin-bottom: 20px; }
+    .question { margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+    .correct { color: green; }
+    .incorrect { color: red; }
+    button { padding: 10px 20px; display: block; margin: 20px auto; }
+    #details { display: none; }
